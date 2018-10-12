@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Image_receiver" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ema-0t-eyR">
+                                <rect key="frame" x="0.0" y="70.5" width="320" height="427"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ema-0t-eyR" secondAttribute="height" multiplier="3:4" id="vRi-w0-Vxi"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3l9-q1-QNd">
+                                <rect key="frame" x="50" y="259.5" width="220" height="49.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here is no any image to show, " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yE7-uH-XB5">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRu-B0-75a">
+                                        <rect key="frame" x="0.0" y="19.5" width="220" height="30"/>
+                                        <state key="normal" title="go there"/>
+                                        <connections>
+                                            <action selector="goToWebSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="axv-e6-hmC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ema-0t-eyR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1BN-BA-09x"/>
+                            <constraint firstItem="ema-0t-eyR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7br-UK-0Bf"/>
+                            <constraint firstItem="3l9-q1-QNd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KU8-Dc-3gh"/>
+                            <constraint firstItem="ema-0t-eyR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RPx-uw-JIF"/>
+                            <constraint firstItem="3l9-q1-QNd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XhI-FI-aiY"/>
+                            <constraint firstItem="ema-0t-eyR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iUN-wb-DgY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="noPhotoStackView" destination="3l9-q1-QNd" id="DzI-4b-mLT"/>
+                        <outlet property="photo" destination="ema-0t-eyR" id="GEN-mF-ECh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="133.09859154929578"/>
+        </scene>
+    </scenes>
+</document>
